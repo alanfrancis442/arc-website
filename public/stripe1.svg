@@ -1,0 +1,20 @@
+<svg width="247" height="125" viewBox="0 0 247 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M79 9L84 9V14" stroke="#252525"/>
+<g opacity="0.1">
+<mask id="mask0_929_652" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-254" y="-7" width="501" height="132">
+<line x1="-126.516" y1="121.738" x2="-0.552137" y2="-0.521272" stroke="white" stroke-width="8.6446"/>
+<line x1="-101.817" y1="121.738" x2="25.0333" y2="-1.38139" stroke="white" stroke-width="8.6446"/>
+<line x1="-76.233" y1="121.738" x2="51.5034" y2="-2.24149" stroke="white" stroke-width="8.6446"/>
+<line x1="-49.7604" y1="121.738" x2="78.8622" y2="-3.1016" stroke="white" stroke-width="8.6446"/>
+<line x1="-22.403" y1="121.738" x2="106.22" y2="-3.1016" stroke="white" stroke-width="8.6446"/>
+<line x1="4.95447" y1="121.738" x2="133.577" y2="-3.1016" stroke="white" stroke-width="8.6446"/>
+<line x1="32.3099" y1="121.738" x2="160.933" y2="-3.1016" stroke="white" stroke-width="8.6446"/>
+<line x1="59.6674" y1="121.738" x2="188.29" y2="-3.1016" stroke="white" stroke-width="8.6446"/>
+<line x1="87.0248" y1="121.738" x2="215.647" y2="-3.1016" stroke="white" stroke-width="8.6446"/>
+<line x1="114.382" y1="121.738" x2="243.005" y2="-3.1016" stroke="white" stroke-width="8.6446"/>
+</mask>
+<g mask="url(#mask0_929_652)">
+<rect x="-67.9336" y="9.98999" width="149.428" height="96.3255" fill="#252525"/>
+</g>
+</g>
+</svg>

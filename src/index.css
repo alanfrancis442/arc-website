@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: sentex;
+    src: url('/fonts/Sentex-Regular.ttf');
+}
+
+@font-face {
+    font-family: gilmer;
+    src: url('/fonts/Gilmer Medium.otf');   
+}
+
+
+
+.stroke-text {
+    -webkit-text-stroke: 2px #252525; /* Adjust the stroke width and color as needed */
+    color: transparent; /* Make the fill color transparent */
+  }
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
