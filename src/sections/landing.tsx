@@ -52,14 +52,20 @@ const Landing = () => {
   return (
     <div
       ref={container}
-      className={`min-h-screen w-full relative ${
+      className={`h-screen w-full relative overflow-hidden ${
         isDark ? "bg-[#252525] text-white" : "bg-[#FEFEFE] text-black"
       }`}
     >
       <div>
         <Nav />
         <img src="/stripe1.svg" alt="" />
-        <div className="text-3xl font-bold absolute z-10 top-1/2 -translate-y-[50%] left-[15%] ">
+        <img
+          className="absolute top-0 right-0 z-50"
+          src="/stripe3.svg"
+          alt=""
+        />
+
+        <div className="text-3xl font-bold absolute z-10 top-1/2 -translate-y-[50%] md:left-[15%] left-10 ">
           <div className="overflow-clip relative flex">
             <span className="font-[gilmer] md:text-6xl text-4xl">Redefine</span>{" "}
             <div className="relative h-16 ml-1">
@@ -82,15 +88,16 @@ const Landing = () => {
               isDark ? "bg-[#FEFEFE]" : "bg-[#252525]"
             } 
             ${isDark ? "text-black" : "text-white"}
-            font-normal flex justify-center items-center gap-5 `}
+            font-normal flex justify-center items-center gap-5 max-sm:text-lg `}
           >
             launching soon{" "}
-            <MdOutlineArrowOutward className="rotate-90 text-5xl font-mono " />
+            <MdOutlineArrowOutward className="rotate-90 md:text-5xl font-mono " />
           </button>
         </div>
       </div>
+
       <div
-        className="absolute flex flex-col md:right-24 right-1/2 max-sm:translate-x-[50%] top-1/2 max-sm:-translate-y-[40%] md:top-0 h-full text-[10rem] md:text-[14rem] font-[sentex] -translate-y-[8%] leading-tight"
+        className="absolute flex flex-col right-24 max-sm:translate-x-[50%]   top-0 h-full text-[10rem] md:text-[14rem] font-[sentex] -translate-y-[8%] leading-tight"
         style={{
           WebkitTextStroke: isDark ? "1px #ffffff" : "2px #000000",
           color: isDark ? "#252525" : "#FFFFFF",
@@ -100,6 +107,10 @@ const Landing = () => {
         <span>n</span>
         <span>s</span>
         <span>l</span>
+        <span className="md:hidden">c</span>
+        <span className="md:hidden">n</span>
+        <span className="md:hidden">s</span>
+        <span className="md:hidden">l</span>
       </div>
       <img
         className="absolute bottom-10 md:right-64"
