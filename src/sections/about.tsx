@@ -1,32 +1,34 @@
 import useThemeStore from "../hooks/themeStore";
 import Nav from "../components/nav";
 import Block from "../components/block";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
   const { isDark, setTheme } = useThemeStore();
   if (!isDark) {
     setTheme();
   }
-
+  const navigate = useNavigate();
   return (
-    <div className="bg-[rgba(37,37,37,1)] text-white  w-full">
+    <div className="bg-[rgba(37,37,37,1)] text-white  w-full overflow-hidden relative">
       <Nav />
-      <div className="flex  justify-between">
-        <div className="w-1/3 p-32 text-xl">
+      <div className="flex max-md:flex-col-reverse justify-between">
+        <div className="md:w-1/3 w-3/5 md:p-32 p-12 pb-8 text-2xl h-full">
           <h3 className="mb-24 text-3xl text-nowrap">
             Where Imagination meets Innovation
           </h3>
-          <p className="mb-12 w-3/5 text-[#C4C3C3]">
+          <p className="mb-12  text-[#C4C3C3]">
             ARC Console brings immersive gaming experiences to life with
             cutting-edge technology and sleek design, redefining the boundaries
             of interactive entertainment.{" "}
           </p>
-          <p className="mb-12 w-3/5 text-[#C4C3C3]">
+          <p className="mb-12  text-[#C4C3C3]">
             Engineered for seamless performance, ARC Console offers gamers a
             gateway to an all-encompassing world of adventure, creativity, and
             connection.
           </p>
           <svg
+            onClick={() => navigate("/")}
             width="103"
             height="95"
             viewBox="0 0 103 95"
@@ -51,15 +53,21 @@ const About = () => {
             />
           </svg>
         </div>
-        <div className="flex flex-col justify-between items-end">
+        <div className="flex flex-col items-end gap-40 relative">
           <img height={400} width={400} src="/pattern.svg" alt="" />
-          <div className="flex flex-col items-start">
-            <span className="text-6xl font-[gilmer] ml-12">introducing</span>
+          <div className="flex flex-col items-start md:absolute top-1/2 -translate-y-[45%]">
+            <span className="md:text-6xl text-3xl font-[gilmer] ml-12">
+              introducing
+            </span>
             <br />
             <br />
             <br />
-            <p className="text-[32rem] font-[gilmer] leading-10 ">arc</p>
+            <p className="md:text-[27rem] text-[16rem] font-[gilmer] leading-3 md:leading-10 ">
+              arc
+            </p>
           </div>
+        </div>
+        <div className="absolute bottom-10 right-32">
           <Block />
         </div>
       </div>

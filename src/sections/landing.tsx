@@ -1,5 +1,5 @@
 import Nav from "../components/nav";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import useThemeStore from "../hooks/themeStore";
 import { FaDiscord, FaInstagram, FaLinkedin, FaTelegram } from "react-icons/fa";
@@ -9,12 +9,16 @@ import { ImRocket } from "react-icons/im";
 import SmallFrame from "../components/smallFrame";
 import { useGSAP } from "@gsap/react";
 import Stripe from "../components/stripe";
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
   const words = ["Play.", "Reality.", "Gaming."];
   const { isDark, setTheme } = useThemeStore();
   const container = useRef<HTMLDivElement>(null);
   const textContainer = useRef<HTMLDivElement>(null);
+  const [count, setcount] = useState(0);
+
+  const navigate = useNavigate();
 
   useGSAP(
     () => {
@@ -63,6 +67,11 @@ const Landing = () => {
       duration: 0.5,
     });
   };
+  useEffect(() => {
+    if (count == 3) {
+      navigate("/about");
+    }
+  }, [count]);
 
   return (
     <div
@@ -106,7 +115,10 @@ const Landing = () => {
           </div>
           <SmallFrame>
             <button
-              onClick={toggleDarkMode}
+              onClick={() => {
+                toggleDarkMode();
+                setcount(count + 1);
+              }}
               className={` md:px-6 px-2 py-2 rounded font-[gilmer] ${
                 isDark ? "bg-[#FEFEFE]" : "bg-[#252525] "
               } 
@@ -122,7 +134,7 @@ const Landing = () => {
       <div
         className="absolute flex flex-col md:right-24 right-0 top-0 h-full text-[10rem] md:text-[14rem] font-[sentex] -translate-y-[8%] leading-tight "
         style={{
-          WebkitTextStroke: isDark ? "1px #ffffff" : "2px #000000",
+          WebkitTextStroke: isDark ? "1.5px #C4C3C3" : "2px #383838",
           color: isDark ? "#252525" : "#FFFFFF",
         }}
       >
