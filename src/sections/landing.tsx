@@ -54,7 +54,7 @@ const Landing = () => {
   return (
     <div
       ref={container}
-      className={`h-screen w-full relative overflow-hidden ${
+      className={`h-[100dvh] w-full relative overflow-hidden ${
         isDark ? "bg-[rgba(37,37,37,1)] text-white" : "bg-[#FEFEFE] text-black"
       }`}
     >
@@ -67,14 +67,14 @@ const Landing = () => {
           alt=""
         />
 
-        <div className="text-3xl font-bold absolute z-10 top-1/2 -translate-y-[50%] md:left-[15%] left-10 ">
+        <div className="text-3xl font-bold absolute z-10 top-1/2 -translate-y-[50%] md:left-[15%] left-5 ">
           <div className="overflow-clip relative flex md:mb-4">
-            <span className="font-[gilmer] md:text-6xl text-4xl">Redefine</span>{" "}
-            <div className="relative h-16 ml-1">
+            <span className="font-[gilmer] md:text-6xl text-2xl">Redefine</span>{" "}
+            <div className="relative md:h-16 h-8 ml-1">
               {words.map((word, index) => (
                 <div
                   key={index}
-                  className={`font-[gilmer] md:text-6xl text-4xl anitext${index}`}
+                  className={`font-[gilmer] md:text-6xl text-2xl anitext${index}`}
                   style={{
                     transform: `translateY(${index * 100}%)`,
                   }}
@@ -87,11 +87,11 @@ const Landing = () => {
           <SmallFrame>
             <button
               onClick={toggleDarkMode}
-              className={` md:px-6 px-2 py-2 ${
-                isDark ? "bg-[#FEFEFE]" : "bg-[#252525] rounded"
+              className={` md:px-6 px-2 py-2 rounded font-[gilmer] ${
+                isDark ? "bg-[#FEFEFE]" : "bg-[#252525] "
               } 
             ${isDark ? "text-black" : "text-white"}
-            font-normal flex justify-center items-center gap-5 max-sm:text-lg `}
+            font-normal flex justify-center items-center md:gap-5 gap-3 max-sm:text-sm `}
             >
               launching soon <ImRocket />
               {/* <MdOutlineArrowOutward className="rotate-90 md:text-5xl font-mono " /> */}
@@ -101,23 +101,23 @@ const Landing = () => {
       </div>
 
       <div
-        className="absolute flex flex-col right-24 max-sm:translate-x-[50%]   top-0 h-full text-[10rem] md:text-[14rem] font-[sentex] -translate-y-[8%] leading-tight"
+        className="absolute flex flex-col md:right-24 right-0    top-0 h-full text-[10rem] md:text-[14rem] font-[sentex] -translate-y-[8%] leading-tight "
         style={{
           WebkitTextStroke: isDark ? "1px #ffffff" : "2px #000000",
           color: isDark ? "#252525" : "#FFFFFF",
         }}
       >
-        <span>c</span>
+        <span className="md:mx-2">c</span>
 
         <Frame>
-          <span>n</span>
-          <span>s</span>
+          <span className="md:mx-2">n</span>
+          <span className="md:mx-2">s</span>
         </Frame>
-        <span>l</span>
-        <span className="md:hidden">c</span>
-        <span className="md:hidden">n</span>
-        <span className="md:hidden">s</span>
-        <span className="md:hidden">l</span>
+        <span className="md:mx-2">l</span>
+        <span className="md:hidden md:mx-2">c</span>
+        <span className="md:hidden md:mx-2">n</span>
+        <span className="md:hidden md:mx-2">s</span>
+        <span className="md:hidden md:mx-2">l</span>
       </div>
       <img
         className="absolute bottom-10 md:right-64"
@@ -125,7 +125,7 @@ const Landing = () => {
         alt=""
       />
       {
-        <div className="absolute bottom-10 left-10 flex gap-8">
+        <div className="absolute bottom-10 md:left-10 left-8 flex md:gap-8 gap-3">
           <a href="#">
             <FaLinkedin className="text-xl md:text-2xl" />
           </a>
