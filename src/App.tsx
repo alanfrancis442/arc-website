@@ -12,23 +12,22 @@ import About from "./sections/about";
 
 const pageVariants = {
   initial: {
-    opacity: 0,
-    x: "-100vw",
+    clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
+    // opacity: 0,
   },
   in: {
-    opacity: 1,
-    x: 0,
+    clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+    // opacity: 1,
   },
   out: {
     opacity: 0,
-    x: "100vw",
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
   },
 };
-
 const pageTransition = {
   type: "tween",
   ease: "easeInOut",
-  duration: 0.5,
+  duration: 1,
 };
 
 function AnimatedRoutes() {

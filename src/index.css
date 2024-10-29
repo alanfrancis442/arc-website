@@ -37,3 +37,35 @@ img {
     background: white;
     color: black;
 }
+
+.text-stroke span {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .text-stroke span::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    -webkit-text-stroke: inherit;
+    pointer-events: none;
+    transition: text-shadow 0.3s ease-in-out;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #252525; /* Dark background color */
+  }
+  
+  .light-theme {
+    background-color: #252525;
+  }
+  
+  .dark-theme {
+    background-color: #fefefe;
+  }

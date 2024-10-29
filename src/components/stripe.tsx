@@ -2,7 +2,7 @@ import useThemeStore from "../hooks/themeStore";
 
 const Stripe = ({ id }: { id?: number }) => {
   const { isDark } = useThemeStore();
-  const strokeColor = isDark ? "#FFFFFF" : "#252525";
+  const strokeColor = isDark ? "rgba(255,255,255,0.8)" : "#252525";
   if (id === 3) {
     return (
       <svg
@@ -164,8 +164,8 @@ const Stripe = ({ id }: { id?: number }) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M177 12V7H182" stroke="#252525" />
-        <path d="M331 103V108H326" stroke="#252525" />
+        <path d="M177 12V7H182" stroke={strokeColor} />
+        <path d="M331 103V108H326" stroke={strokeColor} />
         <g opacity="0.1">
           <mask
             id="mask0_929_613"
@@ -318,7 +318,7 @@ const Stripe = ({ id }: { id?: number }) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M79 9L84 9V14" stroke="#252525" />
+        <path d="M79 9L84 9V14" stroke={strokeColor} />
         <g opacity="0.1">
           <mask
             id="mask0_929_652"

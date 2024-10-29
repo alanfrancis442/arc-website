@@ -10,23 +10,19 @@ const About = () => {
   }
   const navigate = useNavigate();
   return (
-    <div className="bg-[rgba(37,37,37,1)] text-white  w-full overflow-hidden relative">
+    <div className="bg-[rgba(37,37,37,1)] text-white  w-full overflow-hidden relative h-[100dvh]">
       <Nav />
       <div className="flex max-md:flex-col-reverse justify-between">
         <div className="md:w-1/3 w-3/5 md:p-32 p-12 pb-8 text-2xl h-full">
           <h3 className="mb-24 text-3xl text-nowrap">
             Where Imagination meets Innovation
           </h3>
-          <p className="mb-12  text-[#C4C3C3]">
+          <p className="mb-20  text-[#C4C3C3]">
             ARC Console brings immersive gaming experiences to life with
             cutting-edge technology and sleek design, redefining the boundaries
             of interactive entertainment.{" "}
           </p>
-          <p className="mb-12  text-[#C4C3C3]">
-            Engineered for seamless performance, ARC Console offers gamers a
-            gateway to an all-encompassing world of adventure, creativity, and
-            connection.
-          </p>
+
           <svg
             onClick={() => navigate("/")}
             width="103"

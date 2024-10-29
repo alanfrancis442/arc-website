@@ -138,17 +138,17 @@ const Landing = () => {
           color: isDark ? "#252525" : "#FFFFFF",
         }}
       >
-        <span className="md:mx-2">c</span>
+        <span className="md:mx-2 max-md:tracking-tighter">c</span>
 
         <Frame>
-          <span className="md:mx-2">n</span>
-          <span className="md:mx-2">s</span>
+          <span className="md:mx-2 max-md:tracking-tighter">n</span>
+          <span className="md:mx-2 max-md:tracking-tighter">s</span>
         </Frame>
-        <span className="md:mx-2">l</span>
-        <span className="md:hidden md:mx-2">c</span>
-        <span className="md:hidden md:mx-2">n</span>
-        <span className="md:hidden md:mx-2">s</span>
-        <span className="md:hidden md:mx-2">l</span>
+        <span className="md:mx-2 max-md:tracking-tighter">l</span>
+        <span className="md:hidden md:mx-2 max-md:tracking-tighter">c</span>
+        <span className="md:hidden md:mx-2 max-md:tracking-tighter">n</span>
+        <span className="md:hidden md:mx-2 max-md:tracking-tighter">s</span>
+        <span className="md:hidden md:mx-2 max-md:tracking-tighter">l</span>
       </div>
       <div className="absolute top-1/4 right-4">
         <Stripe id={3} />
