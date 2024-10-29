@@ -1,4 +1,3 @@
-import { MdOutlineArrowOutward } from "react-icons/md";
 import Nav from "../components/nav";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
@@ -6,6 +5,9 @@ import gsap from "gsap";
 import useThemeStore from "../hooks/themeStore";
 import { FaDiscord, FaInstagram, FaLinkedin, FaTelegram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import Frame from "../components/frame";
+import { ImRocket } from "react-icons/im";
+import SmallFrame from "../components/smallFrame";
 
 const Landing = () => {
   const words = ["Play.", "Reality.", "Gaming."];
@@ -53,7 +55,7 @@ const Landing = () => {
     <div
       ref={container}
       className={`h-screen w-full relative overflow-hidden ${
-        isDark ? "bg-[#252525] text-white" : "bg-[#FEFEFE] text-black"
+        isDark ? "bg-[rgba(37,37,37,1)] text-white" : "bg-[#FEFEFE] text-black"
       }`}
     >
       <div>
@@ -66,7 +68,7 @@ const Landing = () => {
         />
 
         <div className="text-3xl font-bold absolute z-10 top-1/2 -translate-y-[50%] md:left-[15%] left-10 ">
-          <div className="overflow-clip relative flex">
+          <div className="overflow-clip relative flex md:mb-4">
             <span className="font-[gilmer] md:text-6xl text-4xl">Redefine</span>{" "}
             <div className="relative h-16 ml-1">
               {words.map((word, index) => (
@@ -82,17 +84,19 @@ const Landing = () => {
               ))}
             </div>
           </div>
-          <button
-            onClick={toggleDarkMode}
-            className={`md:mt-4 md:px-6 px-2 py-1 ${
-              isDark ? "bg-[#FEFEFE]" : "bg-[#252525]"
-            } 
+          <SmallFrame>
+            <button
+              onClick={toggleDarkMode}
+              className={` md:px-6 px-2 py-2 ${
+                isDark ? "bg-[#FEFEFE]" : "bg-[#252525] rounded"
+              } 
             ${isDark ? "text-black" : "text-white"}
             font-normal flex justify-center items-center gap-5 max-sm:text-lg `}
-          >
-            launching soon{" "}
-            <MdOutlineArrowOutward className="rotate-90 md:text-5xl font-mono " />
-          </button>
+            >
+              launching soon <ImRocket />
+              {/* <MdOutlineArrowOutward className="rotate-90 md:text-5xl font-mono " /> */}
+            </button>
+          </SmallFrame>
         </div>
       </div>
 
@@ -104,8 +108,11 @@ const Landing = () => {
         }}
       >
         <span>c</span>
-        <span>n</span>
-        <span>s</span>
+
+        <Frame>
+          <span>n</span>
+          <span>s</span>
+        </Frame>
         <span>l</span>
         <span className="md:hidden">c</span>
         <span className="md:hidden">n</span>
@@ -118,21 +125,21 @@ const Landing = () => {
         alt=""
       />
       {
-        <div className="absolute bottom-10 left-10 flex gap-4">
+        <div className="absolute bottom-10 left-10 flex gap-8">
           <a href="#">
-            <FaLinkedin className="text-2xl md:text-3xl" />
+            <FaLinkedin className="text-xl md:text-2xl" />
           </a>
           <a href="#">
-            <FaXTwitter className="text-2xl md:text-3xl" />
+            <FaXTwitter className="text-xl md:text-2xl" />
           </a>
           <a href="#">
-            <FaInstagram className="text-2xl md:text-3xl" />
+            <FaInstagram className="text-xl md:text-2xl" />
           </a>
           <a href="#">
-            <FaDiscord className="text-2xl md:text-3xl" />
+            <FaDiscord className="text-xl md:text-2xl" />
           </a>
           <a href="#">
-            <FaTelegram className="text-2xl md:text-3xl" />
+            <FaTelegram className="text-xl md:text-2xl" />
           </a>
         </div>
       }

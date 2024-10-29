@@ -27,3 +27,13 @@ img {
     -o-user-drag: none;
     user-drag: none;
 }
+
+.light-theme ::selection {
+    background: black;
+    color: white;
+}
+
+.dark-theme ::selection {
+    background: white;
+    color: black;
+}
