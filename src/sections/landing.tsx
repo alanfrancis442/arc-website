@@ -8,6 +8,7 @@ import Frame from "../components/frame";
 import { ImRocket } from "react-icons/im";
 import SmallFrame from "../components/smallFrame";
 import { useGSAP } from "@gsap/react";
+import Stripe from "../components/stripe";
 
 const Landing = () => {
   const words = ["Play.", "Reality.", "Gaming."];
@@ -38,7 +39,7 @@ const Landing = () => {
             {
               y: -100 * (wordIndex + 0.65),
 
-              duration: 0.5,
+              duration: 0.6,
               ease: "power2.inOut",
               delay: letterIndex * 0.05,
             },
@@ -72,27 +73,22 @@ const Landing = () => {
     >
       <div>
         <Nav />
-        <img src="/stripe1.svg" alt="" />
-        <img
-          className="absolute top-0 right-0 z-50"
-          src="/stripe3.svg"
-          alt=""
-        />
+        <Stripe />
 
         <div className="text-3xl font-bold absolute z-10 top-1/2 -translate-y-[50%] md:left-[15%] left-5 ">
           <div className="overflow-clip relative flex md:mb-4">
-            <span className="font-[gilmer] md:text-6xl text-2xl">Redefine</span>{" "}
+            <span className="font-[gilmer] md:text-6xl text-3xl">Redefine</span>{" "}
             <div
               ref={textContainer}
               style={{
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
               }}
-              className="relative md:h-16 h-8  ml-1"
+              className="relative md:h-16 h-10  ml-1"
             >
               {words.map((word, wordIndex) => (
                 <div
                   key={wordIndex}
-                  className={`font-[gilmer] md:text-6xl text-2xl anitext${wordIndex}`}
+                  className={`font-[gilmer] md:text-6xl text-3xl anitext${wordIndex}`}
                 >
                   {word.split("").map((letter, letterIndex) => (
                     <span
@@ -142,11 +138,12 @@ const Landing = () => {
         <span className="md:hidden md:mx-2">s</span>
         <span className="md:hidden md:mx-2">l</span>
       </div>
-      <img
-        className="absolute bottom-10 md:right-64"
-        src="/stripe2.svg"
-        alt=""
-      />
+      <div className="absolute top-1/4 right-4">
+        <Stripe id={3} />
+      </div>
+      <div className="absolute bottom-10 md:right-64">
+        <Stripe id={2} />
+      </div>
       <div className="absolute bottom-10 md:left-10 left-8 flex md:gap-8 gap-3">
         <a href="#">
           <FaLinkedin className="text-xl md:text-2xl" />
