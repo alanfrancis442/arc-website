@@ -10,14 +10,14 @@ const About = () => {
   }
   const navigate = useNavigate();
   return (
-    <div className="bg-[rgba(37,37,37,1)] text-white  w-full overflow-hidden relative h-[100dvh]">
+    <div className="bg-[rgba(37,37,37,1)] text-white  w-full overflow-hidden max-md:overflow-y-scroll relative h-[100dvh]">
       <Nav />
-      <div className="flex max-md:flex-col-reverse justify-between">
-        <div className="md:w-1/3 w-3/5 md:p-32 p-12 pb-8 text-2xl h-full">
-          <h3 className="mb-24 text-3xl text-nowrap">
+      <div className="flex max-xl:flex-col-reverse justify-between">
+        <div className="xl:w-1/3 w-4/5 md:p-32 p-12 pb-8 xl:text-2xl h-full max-md:mt-16">
+          <h3 className="md:mb-24 mb-12 xl:text-3xl  text-nowrap font-[gilmer]">
             Where Imagination meets Innovation
           </h3>
-          <p className="mb-20  text-[#C4C3C3]">
+          <p className="mb-20 font-[gilmer] font-light text-[#C4C3C3]">
             ARC Console brings immersive gaming experiences to life with
             cutting-edge technology and sleek design, redefining the boundaries
             of interactive entertainment.{" "}
@@ -30,6 +30,7 @@ const About = () => {
             viewBox="0 0 103 95"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="cursor-pointer max-md:scale-50"
           >
             <path
               d="M3.22581 10.45C2.58065 9.15 3.1648 6.61146 4.51613 5.25C5.86746 3.88854 8.38708 3.95004 9.67742 4.6C10.9677 5.24995 12.9032 7.2 12.9032 7.2L15.4839 9.8L19.3548 13.7L23.871 18.25L27.7419 21.5L29.6774 19.55V12.4V2H32.9032L35.4839 3.95005L38.0645 6.55L39.3548 8.5L40 13.7V18.25V24.1V28V31.25V33.85L39.3548 36.45L38.0645 37.75L36.129 39.05L34.1935 40.35L32.2581 41H29.6774H26.4516H21.9355H17.4194H13.5484H9.67742L6.45161 39.7L4.51613 38.4L2.58065 36.45L1.29032 33.85L0 31.25H3.87097H6.45161H9.03226H11.6129H14.1935H18.0645L20 28.65L17.4194 26.05L15.4839 24.1L12.9032 21.5L9.67742 18.25L7.09677 15.65C5.70296 14.1334 3.80283 11.6127 3.22581 10.45Z"
@@ -49,21 +50,29 @@ const About = () => {
             />
           </svg>
         </div>
-        <div className="flex flex-col items-end gap-40 relative">
-          <img height={400} width={400} src="/pattern.svg" alt="" />
+        <div className="flex flex-col items-end md:gap-40 gap-20 relative ">
+          <div className="max-xl:w-full flex justify-start">
+            <img
+              className="max-md:w-[35vw]"
+              height={400}
+              width={400}
+              src="/pattern.svg"
+              alt=""
+            />
+          </div>
+
           <div className="flex flex-col items-start md:absolute top-1/2 -translate-y-[45%]">
-            <span className="md:text-6xl text-3xl font-[gilmer] ml-12">
+            <span className="xl:text-6xl lg:text-4xl text-xl font-[gilmer] ml-4 md:ml-12">
               introducing
             </span>
             <br />
-            <br />
-            <br />
-            <p className="md:text-[27rem] text-[16rem] font-[gilmer] leading-3 md:leading-10 ">
+
+            <p className="xl:text-[27rem] lg:text-[16rem] text-9xl font-[gilmer] leading-3 md:leading-[0.2] ">
               arc
             </p>
           </div>
         </div>
-        <div className="absolute bottom-10 right-32">
+        <div className="absolute bottom-32 md:bottom-10 md:right-32 right-10">
           <Block />
         </div>
       </div>

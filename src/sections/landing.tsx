@@ -68,7 +68,7 @@ const Landing = () => {
     });
   };
   useEffect(() => {
-    if (count == 3) {
+    if (count == 2) {
       navigate("/about");
     }
   }, [count]);
@@ -134,7 +134,7 @@ const Landing = () => {
       <div
         className="absolute flex flex-col md:right-24 right-0 top-0 h-full text-[10rem] md:text-[14rem] font-[sentex] -translate-y-[8%] leading-tight "
         style={{
-          WebkitTextStroke: isDark ? "1.5px #C4C3C3" : "2px #383838",
+          WebkitTextStroke: isDark ? "1.5px #c4c3c3ab" : "2px #383838a6",
           color: isDark ? "#252525" : "#FFFFFF",
         }}
       >
