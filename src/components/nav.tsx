@@ -19,7 +19,7 @@ const Nav = () => {
         style={{
           display: location.pathname === "/about" ? "none" : "block",
         }}
-        className="absolute right-10 top-[500%]"
+        className="absolute right-12 top-[500%]"
       >
         <Pattern />
       </div>
