@@ -7,7 +7,7 @@ const Nav = () => {
   const location = useLocation();
   return (
     <div
-      className="flex items-center justify-between gap-8 md:gap-32 md:p-12 p-8  w-3/4 text-xl relative"
+      className="flex items-center justify-between gap-8 md:gap-32 md:p-12 p-8  w-3/4 max-sm:3/5 max-sm:pl-5 text-xl relative"
       style={{
         color: isDark ? "#FFFFFF" : "#000000",
       }}
@@ -19,9 +19,9 @@ const Nav = () => {
         style={{
           display: location.pathname === "/about" ? "none" : "block",
         }}
-        className="absolute right-12 top-[500%]"
+        className="absolute right-12 top-[500%] max-sm:top-[700%]"
       >
-        <Pattern />
+        <Pattern scale="120%" />
       </div>
     </div>
   );

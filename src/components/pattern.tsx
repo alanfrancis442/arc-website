@@ -1,6 +1,6 @@
 import useThemeStore from "../hooks/themeStore";
 
-const Pattern = () => {
+const Pattern = ({ scale = "150%" }: { scale?: string }) => {
   const { isDark } = useThemeStore();
   const strokeColor = isDark ? "#FFFFFF" : "#252525";
   return (
@@ -10,7 +10,10 @@ const Pattern = () => {
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="scale-150"
+      // className="scale-150"
+      style={{
+        scale,
+      }}
     >
       <path d="M10.5 15.5V11H15.5" stroke={strokeColor} />
       <path d="M0 11H4.5V15.5" stroke={strokeColor} />
